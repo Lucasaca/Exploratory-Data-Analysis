@@ -1,4 +1,4 @@
-## First, Import the household_power_cosumption.txt file 
+## First, Import the household_power_cosumption.txt file                                                  ## Saved it in the master folder
 ###then,
 
 data <- read.table(df, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")                             ## Data
