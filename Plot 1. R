@@ -1,9 +1,9 @@
-## First, Import the household_power_cosumption.txt file                                                  ## Saved it in the master folder
+## First, Import the household_power_cosumption.txt file                                                ## Saved it in the master folder
 ###then,
 
-data <- read.table(df, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")                             ## Data
-> subSetData <- data[data$Date %in% c("1/2/2007","2/2/2007") ,]                                           ## Data between the two days
-> globalActivePower <- as.numeric(subSetData$Global_active_power)                                         ## Data that you're going to use for the histogram
-> png("plot1.png", width=480, height=480)                                                                 ## PNG Image 480 pixels x 480 pixels
-> hist(globalActivePower, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")  ## Histogram
-> dev.off()  ## End
+data <- read.table(df, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")                           ## Data
+subSetData <- data[data$Date %in% c("1/2/2007","2/2/2007") ,]                                           ## Data between the two days
+globalActivePower <- as.numeric(subSetData$Global_active_power)                                         ## Data that you're going to use for the histogram
+png("plot1.png", width=480, height=480)                                                                 ## PNG Image 480 pixels x 480 pixels
+hist(globalActivePower, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")  ## Histogram
+dev.off()  ## End
